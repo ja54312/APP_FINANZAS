@@ -8,12 +8,12 @@ const LoginForm = () => {
 
   const [form, setForm] = useState(initialForm);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.ChangeEvent<any>) => {
     e.preventDefault()
     console.log('click submit')
     setForm(initialForm)
   }
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<any>) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
